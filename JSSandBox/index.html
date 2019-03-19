@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Sandbox: Section 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id='mainDiv' class="container card">
+        <h1 class="my-4">Tasks</h1>
+        <div>
+            <form action="#" class="form-group" method="GET">
+                <input id="newTask" name="task" class="form-control" type="text" placeholder="Enter Task">
+                <input  id="submitTask" class="btn btn-success form-control my-1" type="submit" value="Enter">
+            </form>
+        </div>
+        <hr>
+        <h4 id='taskHeading'>My Tasks</h4>
+        <hr>
+        <div class="row card">
+            <ul id='taskList' class="list-group list-group-flush">
+                <li class="list-group-item">Item 1 <a href="#" class="float-right remove"><i class="fa fa-times"
+                            aria-hidden="true"></i></a></li>
+                <li class="list-group-item">Item 2 <a href="#" class="float-right remove"><i class="fa fa-times"
+                            aria-hidden="true"></i></a></li>
+                <li class="list-group-item">Item 3 <a href="#" class="float-right remove"><i class="fa fa-times"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+            <a name="clearAll" id="clearAll" class="btn" href="#" role="button">Clear</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
