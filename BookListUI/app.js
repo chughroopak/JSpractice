@@ -53,6 +53,21 @@ UI.prototype.showAlert = function(message, className){
   },3000);
 }
 
+UI.prototype.deleteBook = function(target){
+  if(target.className === "delete"){
+    target.parentElement.parentElement.remove();
+  }
+}
+
+
+document.getElementById('book-list').addEventListener('click',function(e){
+  const ui = new UI();
+
+  ui.deleteBook(e.target);
+
+  ui.showAlert('Book Removed!', 'success');
+  e.preventDefault();
+});
 
 document.getElementById('book-form').addEventListener('submit', function(e){
   const title = document.getElementById('title').value,
