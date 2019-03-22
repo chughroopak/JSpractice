@@ -1,6 +1,7 @@
 class UI{
 
   constructor(){
+    this.alert = document.getElementById('alert');
     this.location = document.getElementById('w-location');
     this.desc = document.getElementById('w-desc');
     this.string = document.getElementById('w-string');
@@ -19,7 +20,19 @@ class UI{
     this.icon.setAttribute('src', `http://openweathermap.org/img/w/${result.weather[0].icon}.png`);
     this.humidity.textContent=`Relative Humidity: ${result.main.humidity}%`;
     this.cloudiness.textContent=`Cloudiness: ${result.clouds.all}%`;
-    this.visibility.textContent=`Visibility: ${result.visibility/1000} Km`
+    if(result.visibility){
+    this.visibility.textContent=`Visibility: ${result.visibility/1000} Km`;}else{
+      this.visibility.textContent=`Visibility: N/A`
+    }
     this.wind.textContent=`Wind: ${result.wind.speed} m/s`;
+  }
+
+  showAlert(message, className){
+    this.alert.className=`mt-2 ${className}`;
+    this.alert.textContent=message;
+    setTimeout(()=>{
+      this.alert.className="";
+      this.alert.textContent="";
+    },3000);
   }
 }
